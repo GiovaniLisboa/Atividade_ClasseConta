@@ -1,5 +1,7 @@
 package Atividade0904;
 
+import Atividade09.Conta;
+
 public class Conta {
 	private String titular;
 	private int cpf;
@@ -48,4 +50,14 @@ public class Conta {
 	public void sacar (int sac) {
 		saldo -= sac;
 	}
+	
+    public String toString(){
+        return ("Nome: " + getTitular() + "\nCPF: "+ getCpf() + "\nSaldo:" + getSaldo());
+    }
+    
+    public void transferir (Conta dest, int val){
+        this.saque(val);
+        dest.depositar(val);
+    return operacao = "Transferir";   
+    }
 }
